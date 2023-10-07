@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/bmi_calculator_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi_calculator"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:background="@color/purple"
+        android:paddingStart="75sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/height_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/enter_your_height"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmi_calculator_text" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/in_inches"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/in_inches"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/height_text"
+        app:layout_constraintTop_toBottomOf="@id/bmi_calculator_text" />
+
+    <TextView
+        android:id="@+id/weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/enter_your_weight"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_text" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/in_pounds"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/in_pounds"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/height_text"
+        app:layout_constraintTop_toBottomOf="@id/in_inches" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:text="@string/compute_bmi"
+        android:layout_marginTop="20sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="245dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_text"/>
+
+    <TextView
+        android:id="@+id/your_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_bmi"
+        android:layout_marginTop="150sp"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="528dp"
+        android:layout_marginTop="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_bmi"/>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="528dp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
